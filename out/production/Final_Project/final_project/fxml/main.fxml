@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.MainController">
+
+    <!-- TOP HEADER -->
+    <top>
+        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 15;">
+            <Label text="Scheduling App" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <!-- LEFT SIDEBAR -->
+    <left>
+        <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 15;">
+            <Button text="Appointments" onAction="#showAppointments" prefWidth="120"/>
+            <Button text="Events" onAction="#showEvents" prefWidth="120"/>
+            <Button text="Meetings" onAction="#showMeetings" prefWidth="120"/>
+            <Button text="Reminders" onAction="#showReminders" prefWidth="120"/>
+            <Button text="Tasks" onAction="#showTasks" prefWidth="120"/>
+        </VBox>
+    </left>
+
+    <!-- CENTER TABLEVIEW -->
+    <center>
+        <TableView fx:id="mainTable" prefWidth="600" prefHeight="400"/>
+    </center>
+
+    <!-- BOTTOM BUTTON BAR -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="15" style="-fx-padding: 15;">
+            <Button text="Add" onAction="#addItem" prefWidth="80"/>
+            <Button text="Edit" onAction="#editItem" prefWidth="80"/>
+            <Button text="Delete" onAction="#deleteItem" prefWidth="80"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
