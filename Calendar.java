@@ -32,11 +32,12 @@ public class Calendar {
             }
         }
 
+        // Returns a list of events
         return result;
     }
 
-    // Display all events
-    public void displayAllEvents() {
+    // Displays all events
+    public void displayEvents() {
         for (Event e : events) {
             System.out.println(e);
         }
