@@ -1,11 +1,11 @@
-package final_project;
+package final_project.final_project;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Calendar {
 
-    private List<Event> events;
+    protected List<Event> events;
 
     public Calendar() {
         events = new ArrayList<>();

@@ -1,4 +1,4 @@
-package final_project;
+package final_project.final_project;
 import java.time.LocalDate;
 
 public class Task extends Event {
