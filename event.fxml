@@ -13,7 +13,7 @@
 
     <TextField fx:id="nameField" promptText="Event Name" prefWidth="250"/>
     <DatePicker fx:id="datePicker"/>
-    <TextField fx:id="locationField" promptText="Location" prefWidth="250"/>
+    <TextField fx:id="descriptionField" promptText="Description" prefWidth="250"/>
 
     <HBox alignment="CENTER" spacing="10">
     <Button text="Save" onAction="#save" prefWidth="120"/>

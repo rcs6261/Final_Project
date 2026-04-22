@@ -11,7 +11,8 @@
 
     <Label text="Add Reminder" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
 
-    <TextField fx:id="messageField" promptText="Reminder Message" prefWidth="250"/>
+    <TextField fx:id="titleField" promptText="Reminder Title" prefWidth="250"/>
+    <TextField fx:id="descriptionField" promptText="Reminder Message" prefWidth="250"/>
     <DatePicker fx:id="datePicker"/>
     <TextField fx:id="timeField" promptText="Time (HH:MM)" prefWidth="250"/>
     

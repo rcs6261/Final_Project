@@ -11,10 +11,11 @@
 
     <Label text="Add Meeting" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
 
-    <TextField fx:id="topicField" promptText="Topic" prefWidth="250"/>
-    <TextField fx:id="participantsField" promptText="Participants (comma-separated)" prefWidth="250"/>
+    <TextField fx:id="titleField" promptText="Topic" prefWidth="250"/>
+    <TextField fx:id="descriptionField" promptText="Participants (comma-separated)" prefWidth="250"/>
+    <TextField fx:id="locationField" promptText="Location" prefWidth="250"/>
     <DatePicker fx:id="datePicker"/>
-    <TextField fx:id="timeField" promptText="Time (HH:MM)" prefWidth="250"/>
+
 
     <HBox alignment="CENTER" spacing="10">
     <Button text="Save" onAction="#save" prefWidth="120"/>
