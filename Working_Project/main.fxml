@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.MainController">
+
+    <!-- TOP HEADER -->
+    <top>
+        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 15;">
+            <Label text="Scheduling App" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <!-- LEFT SIDEBAR -->
+    <left>
+        <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 15;">
+            <Button text="Appointments" onAction="#openAppointments" prefWidth="120"/>
+            <Button text="Events" onAction="#openEvents" prefWidth="120"/>
+            <Button text="Meetings" onAction="#openMeetings" prefWidth="120"/>
+            <Button text="Reminders" onAction="#openReminders" prefWidth="120"/>
+            <Button text="Tasks" onAction="#openTasks" prefWidth="120"/>
+        </VBox>
+    </left>
+
+    <!-- CENTER TABLEVIEW -->
+    <center>
+        <StackPane>
+            <TableView fx:id="mainTable" prefWidth="600" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id = "titleColumn" text ="Title" prefWidth="200"/>
+                    <TableColumn fx:id = "dateColumn" text ="Date" prefWidth="200"/>
+                     <TableColumn fx:id = "typeColumn" text ="Type" prefWidth="200"/>
+                </columns>
+            </TableView>
+
+            <VBox fx:id ="editPane" visible="false" spacing="10">
+                <TextField fx:id="titleField" promptText="Title"/>
+                <DatePicker fx:id="datePicker"/>
+
+                <Button text ="Save" onAction="#saveEdit"/>
+                <Button text="Cancel" onAction="#cancelEdit"/>
+            </VBox>
+       </StackPane>
+    </center>
+
+    <!-- BOTTOM BUTTON BAR -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="15" style="-fx-padding: 15;">
+            <Button text="Edit" onAction="#editItem" prefWidth="80"/>
+            <Button text="Delete" onAction="#deleteItem" prefWidth="80"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

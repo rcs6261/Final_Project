@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.TaskController"
+      alignment="CENTER" spacing="12" style="-fx-padding: 20;">
+
+    <Label text="Add Task" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="titleField" promptText="Task Name" prefWidth="250"/>
+    <TextField fx:id="descriptionField" promptText="Description" prefWidth="250"/>
+    <DatePicker fx:id="datePicker"/>
+
+    <CheckBox fx:id="completedBox" text="Completed"/>
+
+    <HBox alignment="CENTER" spacing="10">
+    <Button text="Save" onAction="#save" prefWidth="120"/>
+    <Button text="Back to Main" onAction="#goBack" prefWidth="120"/>
+    </HBox>
+
+</VBox>
